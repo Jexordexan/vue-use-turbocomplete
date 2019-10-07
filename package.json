@@ -1,7 +1,17 @@
 {
-  "name": "autocomplete-composer",
+  "name": "v-use-autocomplete",
   "version": "0.1.0",
   "private": true,
+  "keywords": [
+    "Vue",
+    "Vue 3",
+    "Autocomplete",
+    "TypeAhead",
+    "combobox",
+    "Accessible",
+    "composition-api",
+    "poop"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
