@@ -38,9 +38,9 @@
 
 <script lang="ts">
 import Vue from "vue";
-import Autocomplete from "./autocomplete/Autocomplete.vue";
-import AutocompleteListItem from "./autocomplete/AutocompleteListItem.vue";
-import { search } from "./autocomplete/fuse-search";
+import Autocomplete from "@/Autocomplete.vue";
+import AutocompleteListItem from "@/AutocompleteListItem.vue";
+import { search } from "@/fuse-search";
 
 export interface Route {
   attributes: Attributes;
@@ -73,7 +73,7 @@ export default Vue.extend({
       apiKey: "71f1ee97",
       search: search(["text"], true, 10),
       format: (f: any) => f.attributes.long_name,
-      transit: require("@/assets/t-data.json").data
+      transit: require("./assets/t-data.json").data
     };
   },
   methods: {
