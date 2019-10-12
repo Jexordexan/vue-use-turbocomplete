@@ -14,7 +14,7 @@ module.exports = {
     extract: false
   },
   chainWebpack: config => {
-    if (process.env.BUILD_LIB === 'true') {
+    if (process.env.LIB === 'true') {
       config.externals({ 
         '@vue/composition-api': 'vueCompositionApi',
         'fuse.js': 'Fuse',

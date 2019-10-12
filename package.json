@@ -1,15 +1,15 @@
 {
   "name": "v-use-turbocomplete",
   "version": "0.1.0",
-  "private": true,
-  "main": "src/index.ts",
-  "module": "dist/vUseTurbocomplete.esm.js",
+  "license": "MIT",
+  "main": "dist/vUseTurbocomplete.umd.js",
+  "module": "dist/vUseTurbocomplete.common.js",
   "unpkg": "dist/vUseTurbocomplete.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve example/main.ts",
     "lint": "vue-cli-service lint",
-    "build": "vue-cli-service build",
-    "build:lib": "BUILD_LIB=true vue-cli-service build --target lib --name vUseTurbocomplete ./src/index.ts"
+    "build": "LIB=true vue-cli-service build --target lib --name vUseTurbocomplete src/index.ts",
+    "build:example": "vue-cli-service build example/main.ts"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -23,18 +23,15 @@
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-plugin-eslint": "^3.11.0",
     "@vue/cli-service": "^3.11.0",
+    "@vue/composition-api": "^0.3.2",
     "@vue/eslint-config-typescript": "^4.0.0",
     "babel-eslint": "^10.0.1",
-    "bootstrap": "^4.3.1",
-    "bootstrap-vue": "^2.0.2",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "fuse.js": "^3.4.5",
     "node-sass": "^4.12.0",
-    "popper.js": "^1.15.0",
-    "portal-vue": "^2.1.4",
     "sass-loader": "^7.1.0",
     "typescript": "^3.2.1",
-    "vue-cli-plugin-bootstrap-vue": "^0.4.0",
     "vue-cli-plugin-typescript": "0.0.1",
     "vue-cli-plugin-webpack-bundle-analyzer": "^1.4.0",
     "vue-template-compiler": "^2.6.10"
