@@ -14,7 +14,7 @@
         :key="match.id"
         :match="match"
         :active="isHighlighted(index)"
-        @click="select"
+        @click="select(index)"
       >
         <template v-if="$scopedSlots.suggestion" v-slot="{ data }">
           <slot name="suggestion" v-bind="{ data, query }" />
@@ -59,5 +59,3 @@ export default createComponent({
   }
 });
 </script>
-
-<style lang="scss" scoped></style>

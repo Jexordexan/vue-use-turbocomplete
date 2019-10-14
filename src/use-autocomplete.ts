@@ -65,15 +65,14 @@ export function useAutocomplete<T = any>(props: AutocompleteProps<T>, { emit }: 
     highlightIndex.value -= 1;
   }
 
-  watch(query, async (newQuery: string) => {
+  watch(query, (newQuery: string) => {
     if (props.async) {
       fetching.value++;
-      try {
-        const response = await props.search(newQuery);
-        matches.value = (response || []).map(formatData);
-      } finally {
+      props.search(newQuery).then(res => {
+        matches.value = (res || []).map(formatData);
+      }).finally(() => {
         fetching.value--;
-      }
+      })
     } else {
       matches.value = props.search(newQuery, dataFormatted.value);
     }

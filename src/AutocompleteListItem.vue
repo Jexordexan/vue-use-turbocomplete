@@ -25,10 +25,3 @@ export default createComponent({
   }
 });
 </script>
-
-<style lang="scss" scoped>
-.active {
-  background: #29f;
-  color: white;
-}
-</style>

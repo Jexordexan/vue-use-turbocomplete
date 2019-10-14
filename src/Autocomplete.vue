@@ -78,9 +78,3 @@ export default createComponent({
   }
 });
 </script>
-
-<style lang="scss" scoped>
-.autocomplete {
-  position: relative;
-}
-</style>
